@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+<title>lista de Creados</title>
+</head>
+<body>
+<h1>Lista de Creados</h1>
+
+<p></p>
+
+<a th:href="@{/excursiones/destacados}">destacados</a>
+<a th:href="@{/excursiones/creados}">Creados</a>
+<a th:href="@{/excursiones/terminados}">Terminados</a>
+	<table border="2">
+		<tr>
+			<th>Descripción</th>
+			<th>Estado</th>
+			<th>Precio</th>
+			<th>Detalle</th>
+			
+
+
+
+		<tr>
+
+		<tr th:each="ele: ${creados}">
+			<td th:text="${ele.descripcion}"></td>
+			<td th:text="${ele.estado}"></td>
+			<td th:text="${ele.precioUnitario}"></td>
+			<td><a th:href="@{/excursiones/detalle/{id}(id=${ele.idExcursion})}">Detalle</a></td>
+			
+
+		</tr>
+
+	</table>
+	<p><a th:href="@{/}">Volver</a></p>
+
+
+</body>
+</html>

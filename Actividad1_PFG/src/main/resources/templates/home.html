@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Administración de eventos</h1>
+<h3>Mensaje: <span th:text="${mensaje}"></span> </h3>
+<p></p>
+<a th:href="@{/excursiones/alta}">Nueva Excursión</a>
+<a th:href="@{/excursiones/destacados}">Destacados</a>
+<a th:href="@{/excursiones/creados}">Creados</a>
+<a th:href="@{/excursiones/terminados}">Terminados</a>
+	<table border="2">
+		<tr>
+			<th>Descripción</th>
+			<th>Origen</th>
+			<th>Destino</th>
+			<th>Precio</th>
+			<th>Detalle</th>
+			<th>Cancelar</th>
+			<th>Modificar</th>
+
+
+
+		<tr>
+
+		<tr th:each="ele: ${excursiones}">
+			<td th:text="${ele.descripcion}"></td>
+			<td th:text="${ele.origen}"></td>
+			<td th:text="${ele.destino}"></td>
+			<td th:text="${ele.precioUnitario}"></td>
+			<td><a th:href="@{/excursiones/detalle/{id}(id=${ele.idExcursion})}">Detalle</a></td>
+			<td><a th:href="@{/excursiones/cancelar/{id}(id=${ele.idExcursion})}">Cancelar</a></td>
+			<td><a th:href="@{/excursiones/modificar/{id}(id=${ele.idExcursion})}">Modificar</a></td>
+
+		</tr>
+
+	</table>
+
+
+</body>
+</html>

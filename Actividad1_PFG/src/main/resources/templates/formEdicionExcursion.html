@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Modificar Excursión</title>
+</head>
+<body>
+
+<h1>Modificar excursión</h1>
+<form th:action="@{/excursiones/modificar/{id}(id=${excursion.idExcursion})}" method="post">
+
+       
+       <p><input type="text" name="descripcion" placeholder="Descripción" th:value="${excursion.descripcion}"></p>
+       <p><input type="text" name="origen" placeholder="Origen" th:value="${excursion.origen}"></p>
+       <p><input type="text" name="destino" placeholder="Destino" th:value="${excursion.destino}"></p>
+       <p><input type="text" name="duracion" placeholder="Duración" th:value="${excursion.duracion}"></p>
+       <p><input type="text" name="estado" placeholder="Estado" th:value="${excursion.estado}"></p>
+       <p><input type="text" name="destacado" placeholder="Destacado" th:value="${excursion.destacado}"></p>
+       <p><input type="text" name="aforoMaximo" placeholder="Aforo máximo" th:value="${excursion.aforoMaximo}"></p>
+       <p><input type="text" name="minimoAsistentes" placeholder="Mínimo asistentes " th:value="${excursion.minimoAsistentes}"></p>
+       <p><input type="text" name="precioUnitario" placeholder="Precio" th:value="${excursion.precioUnitario}"></p>
+       <p><input type="text" name="imagen" placeholder="Imagen" th:value="${excursion.imagen}"></p>
+       <p><input type="date" name="fechaAlta" placeholder="fechaAlta" th:value="${excursion.fechaAlta}">
+       <p><input type="date" name="fechaExcursion" placeholder="fechaExcursion" th:value="${excursion.fechaExcursion}">
+
+
+       <p><input type="submit" value="enviar"></p>
+
+
+</form>
+
+</body>
+</html>
