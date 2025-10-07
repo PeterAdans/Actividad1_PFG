@@ -15,3 +15,18 @@ CRUD simple usando **listas en memoria** (sin base de datos).
 mvn spring-boot:run
 # o
 ./mvnw spring-boot:run
+
+## 🖼️ Capturas de la aplicación
+
+### Menú principal
+![Menú](docs/menu.png)
+
+### Excursiones destacadas
+![Destacados](docs/destacados.png)
+
+### Detalle de excursión
+![Detalles](docs/detalles.png)
+
+### Crear nueva excursión
+![Nueva Excursión](docs/nuevaExcursion.png)
+
